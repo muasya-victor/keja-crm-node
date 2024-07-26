@@ -1,20 +1,22 @@
 {
   "name": "kejamove-node",
   "version": "1.0.0",
-  "main": "src/index.ts",
+  "main": "src/api.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node src/index.ts",
     "build": "tsc",
-    "dev": "nodemon --exec ts-node src/index.ts"
+    "dev": "netlify dev",
+    "start": "netlify dev --build",
+    "deploy": "netlify deploy --prod"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@netlify/functions": "^1.4.0",
     "express": "^4.19.2",
-    "@netlify/functions": "^1.4.0"
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
