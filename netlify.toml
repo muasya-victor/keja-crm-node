@@ -1,8 +1,12 @@
 [build]
-  publish = ""
-  functions = "" # directory for Netlify functions
+base = ""                  # Leave empty if your source code is in the root directory
+publish = ""               # Leave empty if you're only using serverless functions
+
+[functions]
+directory = "netlify-functions"  # Directory for Netlify serverless functions
 
 [[redirects]]
-  from = "/api/*"
-  status = 200
-  force = true
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
+force = true
