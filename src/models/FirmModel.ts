@@ -4,6 +4,4 @@ const FirmModelSchema = new mongoose.Schema({
     name: { type: String, required: true },
 })
 
-const FirmModel = mongoose.model('FirmModel', FirmModelSchema)
-
-module.exports = FirmModel;
+export const FirmModel = mongoose.model('FirmModel', FirmModelSchema)
